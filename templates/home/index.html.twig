@@ -1,20 +1,150 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block content %}     
+    <!-- section bannière -->
+		<section class="jumbotron jumbotron-fluid">
+			<div class="container">
+			<h3 class="text-center">Bijoux artisanaux</h3>
+			<p class="text-center">en pierre naturelle.</p>
+			</div>
+		</section>
+		<!-- fin section bannière -->
+		<!-- section présentation -->
+		<section>
+			<div class="py-2">
+				<div class="container py-lg-5">
+					<h2 class="text-center">Bienvenue sur notre site internet.</h2>
+					<p class="text-center mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde aspernatur fugit dignissimos. Ab eum nostrum exercitationem quisquam aliquam repudiandae ad maxime. Velit alias earum in accusamus aliquam cumque voluptates!
+						Iusto rem laudantium excepturi veritatis magnam? Rerum molestias reiciendis non adipisci ipsam accusamus nisi impedit asperiores tempora numquam, vel reprehenderit a nobis illo corrupti porro, enim quasi? Dolorum, esse iste?
+					</p>
+				</div>
+			</div>
+		</section>		
+		<!-- fin section présentation -->
+		<!-- section nouveautés -->
+		<hr>
+		<section class="ecommerce-new">
+			<div class="py-2">
+				<div class="container py-lg-5">
+					<h3 class="tittle-ecommerce-new mb-0 text-center">Les Nouveautés</h3>
+					<div class="row mt-lg-5 mt-3">
+						<div class="col-lg-3 col-6 product-incfhny mt-4">
+							<div class="product-image2">
+								<a href="#"><img class="img-fluid" src="assets/uploads/article1.jpg" alt="Article 1"></a>
+							</div>
+							<div class="product-content text-center mb-1">
+								<h3><a href="#">Article 1</a></h3>
+								<span class="price">25 €</span>									
+							</div>
+							<a href="single_product.html" class="btn btn-sm btn-block">Voir le produit</a>
+						</div>
+						<div class="col-lg-3 col-6 product-incfhny mt-4">
+							<div class="product-image2">
+								<a href="#"><img class="img-fluid" src="assets/uploads/article2.jpg" alt="Article 2"></a>
+							</div>
+							<div class="product-content text-center mb-1">
+								<h3><a href="#">Article 2</a></h3>
+								<span class="price">25 €</span>									
+							</div>
+							<a href="single_product.html" class="btn btn-sm btn-block">Voir le produit</a>
+						</div>
+						<div class="col-lg-3 col-6 product-incfhny mt-4">
+							<div class="product-image2">
+								<a href="#"><img class="img-fluid" src="assets/uploads/article3.jpg" alt="Article 3"></a>
+							</div>
+							<div class="product-content text-center mb-1">
+								<h3><a href="#">Article 3</a></h3>
+								<span class="price">25 €</span>									
+							</div>
+							<a href="single_product.html" class="btn btn-sm btn-block">Voir le produit</a>
+						</div>
+						<div class="col-lg-3 col-6 product-incfhny mt-4">
+							<div class="product-image2">
+								<a href="#"><img class="img-fluid" src="assets/uploads/article4.jpg" alt="Article 4"></a>
+							</div>
+							<div class="product-content text-center mb-1">
+								<h3><a href="#">Article 4</a></h3>
+								<span class="price">25 €</span>									
+							</div>
+							<a href="single_product.html" class="btn btn-sm btn-block">Voir le produit</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<hr>
+		<!-- fin section nouveautés -->
+		
+		<!-- section bannière boutique -->
+		<section class="banniere-shop">
+			<!-- /content-6-section -->
+			<div class="content-shop">
+				<div class="container">
+					<div class="content-info-in row">
+						<div class="content-gd col-md-6 offset-lg-3 text-center">
+							<h3 class="hny-title">D'autres produits disponibles :</h3>
+							<p>bracelets, pendentifs, boucles d'oreilles, bagues, géodes, quartz ...</p>
+							<a href="boutique.html" class="read-more-btn2 btn">Visitez les autres produits</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- fin section bannière boutique -->
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+		<!-- section les avis -->
+		<section class="testimonials py-lg-4 py-3 mt-4">
+			<div class="py-lg-4 py-3">
+				<h3 class="tittle-testimonials text-center my-lg-4 my-4">Les avis des clients :</h3>
+				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner" role="listbox">
+						<div class="carousel-item active">
+							<div class="testimonials_grid text-center">
+								<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus.
+									Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.
+								</p>
+								<h4>John Doe</h4>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="testimonials_grid text-center">
+								<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus.
+									Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.
+								</p>
+								<h4>John Doe 2</h4>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="testimonials_grid text-center">
+								<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus.
+									Proin eget gravida odio. Donec ullamcorper est eu accumsan cursus.
+								</p>
+								<h4>John Doe 3</h4>
+							</div>
+						</div>
+						<a class="carousel-control-prev test" href="#carouselExampleControls" role="button" data-slide="prev">
+							<span class="fas fa-long-arrow-alt-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next test" href="#carouselExampleControls" role="button" data-slide="next">
+							<span class="fas fa-long-arrow-alt-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		<!-- fin section les avis -->
 
-<div class="example-wrapper">
-    <h1>Hello </h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/laragon/www/Symfony/Lithosphere/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/laragon/www/Symfony/Lithosphere/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    // script pour le carrousel 
+    
+
+
+</script>
 {% endblock %}

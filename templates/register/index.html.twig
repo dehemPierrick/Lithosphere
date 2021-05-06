@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}Inscription - Lithosphère France{% endblock %}
+{% block content %}  
+    <!-- section inscription utilisateur -->
+		<section class="register-user">
+            <div class="container">
+                <h1>Inscription</h1>
+                {% if notification %}
+                    <div class="alert alert-info">{{ notification }}</div>
+                    <hr>
+                {% endif %}
+                {{ form(form) }} <!-- on injecte la variable form qui est entre parenthèse et qui vient de register controller dans l'objet symfony form -->
+            </div>
+		</section>
+		<!-- fin inscription utilisateur -->
+{% endblock %}
