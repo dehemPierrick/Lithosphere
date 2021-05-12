@@ -25,7 +25,8 @@ class RegisterType extends AbstractType
                     'max' =>30
                 ]),
                 'attr' => [
-                    'placeholder' => 'Merci de saisir votre prénom'
+                    'placeholder' => 'Merci de saisir votre prénom',
+                    'class' =>'form-control'
                 ]
             ])
             ->add('lastname', TextType::class,[
@@ -35,7 +36,8 @@ class RegisterType extends AbstractType
                     'max' =>30
                 ]),
                 'attr' => [
-                    'placeholder' => 'Merci de saisir votre nom'
+                    'placeholder' => 'Merci de saisir votre nom',
+                    'class' =>'form-control'
                 ]
             ])
             ->add('email',EmailType::class,[
@@ -45,29 +47,36 @@ class RegisterType extends AbstractType
                     'max' =>55
                 ]),
                 'attr' => [
-                    'placeholder' => 'Merci de saisir votre email'
+                    'placeholder' => 'Merci de saisir votre email',
+                    'class' =>'form-control'
                 ]
             ]) // équivalent à un input email
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
-                'invalid_message' => "Les mots de passes ne sont pas identiques.",
+                'invalid_message' => "Les mots de passe ne sont pas identiques.",
                 'required' => true,
                 'first_options' => [
                     'label' =>'Mot de passe :',
                     'attr' => [
-                        'placeholder' => 'Merci de saisir un mot de passe'
+                        'placeholder' => 'Merci de saisir un mot de passe',
+                        'class' =>'form-control mb-3'
                     ]
                 ],
                 'second_options' => [
                     'label' =>'Confirmation du mot de passe :',
                     'attr' => [
-                        'placeholder' => 'Merci de confirmer le mot de passe'
+                        'placeholder' => 'Merci de confirmer le mot de passe',
+                        'class' =>'form-control mb-3'
                     ]
                 ]
             ])
 
             ->add('submit', SubmitType::class,[
-                'label' => "S'inscrire"
+                'label' => "S'inscrire",
+                'attr' => [
+                    'class' =>'btn btn-lg btn-primary btn-block text-uppercase'
+                ]
+
             ])
 
         ;

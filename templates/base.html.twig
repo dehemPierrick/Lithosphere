@@ -47,7 +47,7 @@
 					<ul class="cart-inner-info">
 						<li class="button-log">
 							{% if app.user %} <!-- si l'utilisateur est connecté -->
-								<a href="{{ path('account') }}"><span class="fa fa-user" aria-hidden="true"><small> ({{app.user.firstname}})</small></a> | <a href="{{ path('app_logout') }}"><i class="fas fa-sign-out-alt"></i></a>
+								<a href="{{ path('account') }}"><span class="fa fa-user" aria-hidden="true"><small> ({{app.user.firstname|capitalize}})</small></a> | <a href="{{ path('app_logout') }}"><i class="fas fa-sign-out-alt"></i></a>
 							{% else %}
 								<a href="{{ path('account') }}"><span class="fa fa-user" aria-hidden="true"></a>
 							{% endif %}

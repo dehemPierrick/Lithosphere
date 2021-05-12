@@ -2,37 +2,38 @@
 
 {% block title %}Mon Compte - Lithosphère France{% endblock %}
 {% block content %}  
-    <!-- section login utilisateur -->
-    <h1>Mon compte :</h1>    
-    <p>Bienvenue {{app.user.firstname}} dans votre compte.</p>
-    <p>C'est dans cet espace que vous allez pouvoir gérer toutes vos informations personnelles.</p>
-    <hr>
-    {% if is_granted('ROLE_ADMIN') %} <!-- Permet d'afficher le lien administrateur que pour un role admin-->
-        <a href="/admin">Administration</a><br/>
-    {% endif %}
-    <hr>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="account-item text-center">
-                <i class="fas fa-unlock-alt fa-2x"></i><br/>
-                <a href="#">Modifier son mot de passe</a> 
+    <section class="container"><!-- section login utilisateur -->
+        <h1>Mon compte :</h1>    
+        <p>Bienvenue <strong>{{ app.user.firstname|capitalize}}</strong> dans votre compte.</p>
+        <p>C'est dans cet espace que vous allez pouvoir gérer toutes vos informations personnelles.</p>
+        <hr>
+        {% if is_granted('ROLE_ADMIN') %} <!-- Permet d'afficher le lien administrateur que pour un role admin-->
+            <a href="/admin">Administration</a><br/>
+        {% endif %}
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="account-item text-center">
+                    <i class="fas fa-unlock-alt fa-2x"></i><br/>
+                    <a href="#">Modifier son mot de passe</a> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="account-item text-center">
+                    <i class="fas fa-address-card fa-2x"></i><br/>
+                    <a href="#">Gérer mes adresses</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="account-item text-center">
+                    <i class="fas fa-gift fa-2x"></i><br/>
+                    <a href="#">Mes commandes</a>
+                </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="account-item text-center">
-                <i class="fas fa-address-card fa-2x"></i><br/>
-                <a href="#">Gérer mes adresses</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="account-item text-center">
-                <i class="fas fa-gift fa-2x"></i><br/>
-                <a href="#">Mes commandes</a>
-            </div>
-        </div>
-    </div>
-    <hr>
-	<!-- fin login utilisateur -->
+        <hr>
+	</section>
+    <!-- fin login utilisateur -->
 {% endblock %}
 
 

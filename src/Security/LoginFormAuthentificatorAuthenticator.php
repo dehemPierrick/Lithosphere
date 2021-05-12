@@ -71,7 +71,7 @@ class LoginFormAuthentificatorAuthenticator extends AbstractFormLoginAuthenticat
 
         if (!$user) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Email could not be found.');
+            throw new CustomUserMessageAuthenticationException("L'email n'existe pas dans la base de donnée.");
         }
 
         return $user;
@@ -96,8 +96,8 @@ class LoginFormAuthentificatorAuthenticator extends AbstractFormLoginAuthenticat
             return new RedirectResponse($targetPath);
         }
 
-        // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
-        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
+        // redirection si le login et mot de passe sont bons on se dirige vers la page compte (mettre le nom de la route)
+        return new RedirectResponse($this->urlGenerator->generate('account'));
     }
 
     protected function getLoginUrl()
