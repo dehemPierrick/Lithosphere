@@ -2,7 +2,7 @@
 
 {% block title %}Mon Compte - Lithosphère France{% endblock %}
 {% block content %}  
-    <section class="container"><!-- section login utilisateur -->
+    <section class="container"><!-- section compte utilisateur -->
         <h1>Mon compte :</h1>    
         <p>Bienvenue <strong>{{ app.user.firstname|capitalize}}</strong> dans votre compte.</p>
         <p>C'est dans cet espace que vous allez pouvoir gérer toutes vos informations personnelles.</p>
@@ -21,7 +21,7 @@
             <div class="col-md-4">
                 <div class="account-item text-center">
                     <i class="fas fa-address-card fa-2x"></i><br/>
-                    <a href="#">Gérer mes adresses</a>
+                    <a href="{{ path('account_address') }}">Gérer mes adresses</a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -33,7 +33,7 @@
         </div>
         <hr>
 	</section>
-    <!-- fin login utilisateur -->
+    <!-- fin compte                                                                                      utilisateur -->
 {% endblock %}
 
 

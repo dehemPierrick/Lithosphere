@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CGV - Lithosphère France{% endblock %}
+
+{% block content %}  
+    <!-- section CGV -->
+    <section class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row product-container mb-4">
+                    {% for cgv in cgvs %} 
+                        <h3>{{cgv.title|nl2br}}</h3>
+                        <p class="mt-3">{{cgv.Preambule|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article1|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article2|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article3|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article4|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article5|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article6|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article7|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article8|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article9|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article10|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article11|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article12|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article13|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article14|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article15|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article16|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article17|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article18|nl2br}}</p>
+                        <p class="mt-3">{{cgv.Article19|nl2br}}</p>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin section CGV -->
+{% endblock %}

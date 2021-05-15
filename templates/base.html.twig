@@ -39,7 +39,7 @@
 				</div>
 				<div class="col-md-6 logo text-center">
 					<h1 class="logo">
-						<a class="navbar-brand" href="{{ path('home') }}">Lithosphère</a>
+						<a class="navbar-brand" href="{{ path('home') }}">Lithosphère France</a>
 					</h1>
 				</div>
 
@@ -53,7 +53,7 @@
 							{% endif %}
 						</li>
                         <li class="button-log">
-							<a class="top_cart" href="#">Mon Panier <i class="fas fa-cart-arrow-down"></i>
+							<a class="top_cart" href="{{ path('cart') }}">Mon Panier <i class="fas fa-cart-arrow-down"></i>
 							</a>
 						</li>
 					</ul>
@@ -77,7 +77,7 @@
 							<a class="nav-link" href="#aproposde">A propos</a>
 						</li>
                         <li class="nav-item">
-							<a class="nav-link" href="#">Boutique</a>
+							<a class="nav-link" href="{{ path('products') }}">Boutique</a>
 						</li>
                         <li class="nav-item">
 							<a class="nav-link" href="#">Contact</a>
@@ -142,7 +142,7 @@
 							<a href="#aproposde">A propos</a>
 						</li>
 						<li>
-							<a href="#">CGV</a>
+							<a href="{{ path('c_g_v') }}">CGV</a>
 						</li>
                         <li>
 							<a href="#">Politique de Confidentialité</a>

@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Panier - Lithosphère France{% endblock %}
+
+{% block content %}  
+    <!-- section panier -->
+    <section class="table-panier">
+        <div class="container py-lg-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <h3 class="tittle-w3layouts my-lg-4 mt-3">Récapitulatif du panier :</h3>
+                        Retrouvez l'ensemble des produits que vous avez ajouté à votre panier.
+                        {% if cart|length > 0 %} <!--  si le panier n'est pas vide -->
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Produit</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col" class="text-center">Quantité</th>
+                                        <th scope="col" class="text-right">Prix Unitaire</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% set total = null %} <!-- variable pour calculer le total-->
+                                    {% for product in cart %}
+                                    <tr>
+                                        <td><img src="/uploads/{{product.product.illustration}}" alt="{{ product.product.name }}" class="img-fluid col-lg-4 col-12"/> </td>
+                                        <td class="align-middle">{{ product.product.name }}</td>
+                                        <td class="align-middle">{{ product.product.description}}</td>
+                                        <td class="align-middle">
+                                            <a href="{{ path('decrease_to_cart', {'id': product.product.id} ) }}">
+                                                <i class="fas fa-minus-circle"></i>
+                                            </a>
+                                            {{ product.quantity }}
+                                            <a href="{{ path('add_to_cart', {'id': product.product.id} ) }}">
+                                                <i class="fas fa-plus-circle"></i>
+                                            </a>
+                                        </td>
+                                        <td class="text-right align-middle">{{(product.product.price /100) |number_format(2, ',','.') }}€ </td>
+                                        <td class="text-right align-middle">
+                                            <a href="{{ path('delete_to_cart', {'id': product.product.id} ) }}">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                        
+                                    </tr>
+                                    
+                                        {% set total = total + (product.product.price * product.quantity ) %}
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            <div class="text-right mb-5">
+                                <b>Nombre de produits : {{cart|length}}</b>
+                                <br/>
+                                <b>Total de mon panier : {{((total ) /100) |number_format(2, ',','.') }}€</b>
+                            </div>
+                        {% else %}
+                            <hr>
+                            <p><b>Le panier est vide.</b></p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col mb-2 py-lg-3">
+                    <div class="row">
+                        <div class="col-sm-12  col-md-6 mb-3">
+                            <a href="{{ path('products') }}"  class="btn btn-block btn-secondary">Retour à la boutique</a>
+                        </div>
+                        <div class="col-sm-12 col-md-6 mb-3">
+                            <a href="#"  class="btn btn-block btn-success">Procéder au paiement</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin section panier -->
+{% endblock %}
